@@ -1,0 +1,6 @@
+Carbon Footprint Analyzer Agent
+
+1. Scrape and process unstructured supply chain documents (lanchain)
+2. Train Graph Neural Network (GNN) to map supply chain dependecies and identify high impact emission areas
+3. Implement GenAI to use "what-if" analysis (switching to solar vs wind energy)
+4. Develop ML model to calculate carbon-footprint based on sensor and supply data

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Center Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #388E3C;
+            --light-bg: #F5F5F5;
+            --border-color: #E0E0E0;
+        }
+        
+        body {
+            background-color: var(--light-bg);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1, h2 {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .tab-navigation {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .tab-button {
+            padding: 12px 20px;
+            background: none;
+            border: none;
+            font-size: 18px;
+            color: #555;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .tab-button i {
+            margin-right: 10px;
+        }
+        
+        .tab-button.active {
+            color: var(--primary-color);
+            font-weight: bold;
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .form-section {
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        
+        .form-select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 16px;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23555' d='M6 9L0 3h12'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+        }
+        
+        .btn-calculate {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 14px 28px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 20px auto;
+        }
+        
+        .btn-calculate:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .input-with-spinner {
+            position: relative;
+        }
+        
+        .spinner-buttons {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            height: 70%;
+        }
+        
+        .spinner-up, .spinner-down {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .spinner-up i, .spinner-down i {
+            font-size: 12px;
+            color: #555;
+        }
+        
+        /* Hide tabs initially */
+        #fileUploadTab, #apiTab {
+            display: none;
+        }
+        
+        /* Flash messages */
+        .flash-messages {
+            margin-bottom: 20px;
+        }
+        
+        .flash-message {
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        
+        .flash-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .flash-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        /* Form error messages */
+        .form-error {
+            color: #721c24;
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Center Carbon Footprint Calculator</h1>
+        
+        <!-- Flash Messages -->
+        {% if get_flashed_messages() %}
+        <div class="flash-messages">
+            {% for category, message in get_flashed_messages(with_categories=true) %}
+                <div class="flash-message {{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        
+        <!-- Tab Navigation -->
+        <div class="tab-navigation">
+            <button id="manualEntryButton" class="tab-button active" onclick="switchTab('manualEntry')">
+                <i class="fas fa-edit"></i> Manual Entry
+            </button>
+            <button id="fileUploadButton" class="tab-button" onclick="switchTab('fileUpload')">
+                <i class="fas fa-file-upload"></i> File Upload
+            </button>
+            <button id="apiButton" class="tab-button" onclick="switchTab('api')">
+                <i class="fas fa-cloud"></i> API
+            </button>
+        </div>
+        
+        <!-- Manual Entry Tab -->
+        <div id="manualEntryTab">
+            <form id="manualEntryForm" action="{{ url_for('calculate') }}" method="POST" onsubmit="return validateForm()">
+                <input type="hidden" name="data_source" value="manual">
+                
+                <!-- Energy Consumption Section -->
+                <div class="form-section">
+                    <h2>Energy Consumption</h2>
+                    <div class="form-group">
+                        <label class="form-label" for="total_electricity">Total Electricity (kWh/day)</label>
+                        <div class="input-with-spinner">
+                            <input type="number" id="total_electricity" name="total_electricity" class="form-control" value="0" min="0" step="1" required>
+                            <div class="spinner-buttons">
+                                <button type="button" class="spinner-up" onclick="incrementValue('total_electricity')"><i class="fas fa-chevron-up"></i></button>
+                                <button type="button" class="spinner-down" onclick="decrementValue('total_electricity')"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-error" id="total_electricity_error">Total electricity must be non-negative</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="pue">PUE (Power Usage Effectiveness)</label>
+                        <div class="input-with-spinner">
+                            <input type="number" id="pue" name="pue" class="form-control" value="1.5" min="1.0" step="0.1" required>
+                            <div class="spinner-buttons">
+                                <button type="button" class="spinner-up" onclick="incrementValue('pue', 0.1)"><i class="fas fa-chevron-up"></i></button>
+                                <button type="button" class="spinner-down" onclick="decrementValue('pue', 0.1)"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-error" id="pue_error">PUE must be at least 1.0</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="renewable_percentage">Renewable Energy (%)</label>
+                        <div class="input-with-spinner">
+                            <input type="number" id="renewable_percentage" name="renewable_percentage" class="form-control" value="0" min="0" max="100" step="1">
+                            <div class="spinner-buttons">
+                                <button type="button" class="spinner-up" onclick="incrementValue('renewable_percentage')"><i class="fas fa-chevron-up"></i></button>
+                                <button type="button" class="spinner-down" onclick="decrementValue('renewable_percentage')"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-error" id="renewable_percentage_error">Renewable percentage must be 0–100</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="region">Region</label>
+                        <select id="region" name="region" class="form-select">
+                            <option value="global_average">Global Average</option>
+                            {% for region_code, region_name in regions %}
+                                <option value="{{ region_code }}">{{ region_name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Computing Resources Section -->
+                <div class="form-section">
+                    <h2>Computing Resources</h2>
+                    <div class="form-group">
+                        <label class="form-label" for="num_servers">Number of Servers</label>
+                        <div class="input-with-spinner">
+                            <input type="number" id="num_servers" name="num_servers" class="form-control" value="0" min="0" step="1">
+                            <div class="spinner-buttons">
+                                <button type="button" class="spinner-up" onclick="incrementValue('num_servers')"><i class="fas fa-chevron-up"></i></button>
+                                <button type="button" class="spinner-down" onclick="decrementValue('num_servers')"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-error" id="num_servers_error">Number of servers must be non-negative</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="cpu_utilization">Average CPU Utilization (%)</label>
+                        <div class="input-with-spinner">
+                            <input type="number" id="cpu_utilization" name="cpu_utilization" class="form-control" value="0" min="0" max="100" step="1">
+                            <div class="spinner-buttons">
+                                <button type="button" class="spinner-up" onclick="incrementValue('cpu_utilization')"><i class="fas fa-chevron-up"></i></button>
+                                <button type="button" class="spinner-down" onclick="decrementValue('cpu_utilization')"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-error" id="cpu_utilization_error">CPU utilization must be 0–100</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="gpu_count">GPU Count</label>
+                        <div class="input-with-spinner">
+                            <input type="number" id="gpu_count" name="gpu_count" class="form-control" value="0" min="0" step="1">
+                            <div class="spinner-buttons">
+                                <button type="button" class="spinner-up" onclick="incrementValue('gpu_count')"><i class="fas fa-chevron-up"></i></button>
+                                <button type="button" class="spinner-down" onclick="decrementValue('gpu_count')"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-error" id="gpu_count_error">GPU count must be non-negative</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="gpu_utilization">Average GPU Utilization (%)</label>
+                        <div class="input-with-spinner">
+                            <input type="number" id="gpu_utilization" name="gpu_utilization" class="form-control" value="0" min="0" max="100" step="1">
+                            <div class="spinner-buttons">
+                                <button type="button" class="spinner-up" onclick="incrementValue('gpu_utilization')"><i class="fas fa-chevron-up"></i></button>
+                                <button type="button" class="spinner-down" onclick="decrementValue('gpu_utilization')"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-error" id="gpu_utilization_error">GPU utilization must be 0–100</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="storage_capacity">Storage Capacity (TB)</label>
+                        <div class="input-with-spinner">
+                            <input type="number" id="storage_capacity" name="storage_capacity" class="form-control" value="0" min="0" step="1">
+                            <div class="spinner-buttons">
+                                <button type="button" class="spinner-up" onclick="incrementValue('storage_capacity')"><i class="fas fa-chevron-up"></i></button>
+                                <button type="button" class="spinner-down" onclick="decrementValue('storage_capacity')"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-error" id="storage_capacity_error">Storage capacity must be non-negative</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="storage_type">Storage Type</label>
+                        <select id="storage_type" name="storage_type" class="form-select">
+                            <option value="HDD">HDD</option>
+                            <option value="SSD">SSD</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Facility Factors Section -->
+                <div class="form-section">
+                    <h2>Facility Factors</h2>
+                    <div class="form-group">
+                        <label class="form-label" for="facility_area">Facility Area (sq m)</label>
+                        <div class="input-with-spinner">
+                            <input type="number" id="facility_area" name="facility_area" class="form-control" value="0" min="0" step="1">
+                            <div class="spinner-buttons">
+                                <button type="button" class="spinner-up" onclick="incrementValue('facility_area')"><i class="fas fa-chevron-up"></i></button>
+                                <button type="button" class="spinner-down" onclick="decrementValue('facility_area')"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-error" id="facility_area_error">Facility area must be non-negative</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="cooling_efficiency">Cooling Efficiency (COP)</label>
+                        <div class="input-with-spinner">
+                            <input type="number" id="cooling_efficiency" name="cooling_efficiency" class="form-control" value="3" min="0.1" step="0.1">
+                            <div class="spinner-buttons">
+                                <button type="button" class="spinner-up" onclick="incrementValue('cooling_efficiency', 0.1)"><i class="fas fa-chevron-up"></i></button>
+                                <button type="button" class="spinner-down" onclick="decrementValue('cooling_efficiency', 0.1)"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-error" id="cooling_efficiency_error">Cooling efficiency must be positive</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="utilization_hours">Daily Operation Hours</label>
+                        <div class="input-with-spinner">
+                            <input type="number" id="utilization_hours" name="utilization_hours" class="form-control" value="24" min="0" max="24" step="1">
+                            <div class="spinner-buttons">
+                                <button type="button" class="spinner-up" onclick="incrementValue('utilization_hours')"><i class="fas fa-chevron-up"></i></button>
+                                <button type="button" class="spinner-down" onclick="decrementValue('utilization_hours')"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-error" id="utilization_hours_error">Utilization hours must be 0–24</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="ai_compute_hours">Daily AI Compute Hours</label>
+                        <div class="input-with-spinner">
+                            <input type="number" id="ai_compute_hours" name="ai_compute_hours" class="form-control" value="0" min="0" max="24" step="1">
+                            <div class="spinner-buttons">
+                                <button type="button" class="spinner-up" onclick="incrementValue('ai_compute_hours')"><i class="fas fa-chevron-up"></i></button>
+                                <button type="button" class="spinner-down" onclick="decrementValue('ai_compute_hours')"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-error" id="ai_compute_hours_error">AI compute hours must be 0–24</div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-calculate">Calculate Carbon Footprint</button>
+            </form>
+        </div>
+        
+        <!-- File Upload Tab -->
+        <div id="fileUploadTab" style="display: none;">
+            <form id="fileUploadForm" action="{{ url_for('calculate') }}" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="data_source" value="file">
+                <div class="form-section">
+                    <h2>Upload Data File</h2>
+                    <p>Upload a CSV or Excel file with your data center information.</p>
+                    <div class="form-group">
+                        <label class="form-label" for="file">Select File</label>
+                        <input type="file" id="file" name="file" class="form-control" accept=".csv,.xlsx,.xls" required>
+                    </div>
+                    <div class="form-group">
+                        <a href="{{ url_for('static', filename='templates/data_center_template.xlsx') }}" download>Download Template</a>
+                    </div>
+                </div>
+                <button type="submit" class="btn-calculate">Upload and Calculate</button>
+            </form>
+        </div>
+        
+        <!-- API Tab -->
+        <div id="apiTab" style="display: none;">
+            <form id="apiForm" action="{{ url_for('calculate') }}" method="POST">
+                <input type="hidden" name="data_source" value="api">
+                <div class="form-section">
+                    <h2>API Integration</h2>
+                    <p>Provide an API endpoint that returns data center information in JSON format.</p>
+                    <div class="form-group">
+                        <label class="form-label" for="api_url">API URL</label>
+                        <input type="url" id="api_url" name="api_url" class="form-control" placeholder="https://example.com/api/datacenter" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="api_key">API Key (Optional)</label>
+                        <input type="password" id="api_key" name="api_key" class="form-control">
+                    </div>
+                </div>
+                <button type="submit" class="btn-calculate">Connect and Calculate</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        // Tab switching function
+        function switchTab(tabName) {
+            document.getElementById('manualEntryTab').style.display = 'none';
+            document.getElementById('fileUploadTab').style.display = 'none';
+            document.getElementById('apiTab').style.display = 'none';
+            document.getElementById('manualEntryButton').classList.remove('active');
+            document.getElementById('fileUploadButton').classList.remove('active');
+            document.getElementById('apiButton').classList.remove('active');
+            document.getElementById(tabName + 'Tab').style.display = 'block';
+            document.getElementById(tabName + 'Button').classList.add('active');
+        }
+        
+        // Increment input value function
+        function incrementValue(inputId, step = 1) {
+            const input = document.getElementById(inputId);
+            const value = parseFloat(input.value) || 0;
+            input.value = (value + step).toFixed(step < 1 ? 1 : 0);
+            validateField(inputId);
+        }
+        
+        // Decrement input value function
+        function decrementValue(inputId, step = 1) {
+            const input = document.getElementById(inputId);
+            const value = parseFloat(input.value) || 0;
+            const minValue = parseFloat(input.min) || 0;
+            input.value = Math.max(minValue, (value - step)).toFixed(step < 1 ? 1 : 0);
+            validateField(inputId);
+        }
+        
+        // Validate individual field
+        function validateField(inputId) {
+            const input = document.getElementById(inputId);
+            const errorDiv = document.getElementById(inputId + '_error');
+            let isValid = true;
+
+            if (inputId === 'total_electricity' || inputId === 'num_servers' || inputId === 'gpu_count' || 
+                inputId === 'storage_capacity' || inputId === 'facility_area') {
+                isValid = parseFloat(input.value) >= 0;
+            } else if (inputId === 'pue') {
+                isValid = parseFloat(input.value) >= 1.0;
+            } else if (inputId === 'renewable_percentage' || inputId === 'cpu_utilization' || inputId === 'gpu_utilization') {
+                isValid = parseFloat(input.value) >= 0 && parseFloat(input.value) <= 100;
+            } else if (inputId === 'cooling_efficiency') {
+                isValid = parseFloat(input.value) > 0;
+            } else if (inputId === 'utilization_hours' || inputId === 'ai_compute_hours') {
+                isValid = parseFloat(input.value) >= 0 && parseFloat(input.value) <= 24;
+            }
+
+            errorDiv.style.display = isValid ? 'none' : 'block';
+            return isValid;
+        }
+        
+        // Validate entire form
+        function validateForm() {
+            const inputs = [
+                'total_electricity', 'pue', 'renewable_percentage', 'num_servers', 
+                'cpu_utilization', 'gpu_count', 'gpu_utilization', 'storage_capacity',
+                'facility_area', 'cooling_efficiency', 'utilization_hours', 'ai_compute_hours'
+            ];
+            let isValid = true;
+            inputs.forEach(inputId => {
+                if (!validateField(inputId)) {
+                    isValid = false;
+                }
+            });
+            return isValid;
+        }
+    </script>
+</body>
+</html>

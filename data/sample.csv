@@ -1,0 +1,2 @@
+total_electricity,pue,renewable_percentage,region,num_servers,cpu_utilization,gpu_count,storage_capacity,facility_area,cooling_efficiency,utilization_hours
+0,1.5,0,global,0,0,0,0,0,3,24

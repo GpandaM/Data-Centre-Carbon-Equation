@@ -1,0 +1,2 @@
+Fine tune SLM/LLM to generate compliance narrative aligned with framework like GRI or SASB
+It can be integrated with PowerBI to create dynamic charts from ESG metrics

@@ -1,0 +1,5 @@
+1. setup cont data pipeline to monitor regulatory resources (EU CSRD updates)
+2. Use entity recognistion to categorize new regulations and asess their relevance
+3. make an alert system integrated with Teams/Slack to notify stakeholder
+4. Program the agent to recommend action steps (adjust emission tracking) using the fine-tuned Llama-2 model
+5. store regulatory data in Neo4j for efficient querying and mapping

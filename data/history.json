@@ -1,0 +1,2111 @@
+[
+    {
+        "timestamp": "2025-05-08T16:27:51.015001",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 64.8,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 23652.0,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 90.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "details": {
+                "electricity_consumption": {
+                    "value": 50.0,
+                    "unit": "kWh/day"
+                },
+                "pue": {
+                    "value": 1.8,
+                    "unit": ""
+                },
+                "renewable_percentage": {
+                    "value": 0.0,
+                    "unit": "%"
+                },
+                "carbon_intensity": {
+                    "value": 0.72,
+                    "unit": "kg CO2e/kWh"
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 36.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 55.6
+                },
+                "cooling": {
+                    "value": 20.16,
+                    "unit": "kg CO2e/day",
+                    "percentage": 31.1
+                },
+                "other_overhead": {
+                    "value": 8.64,
+                    "unit": "kg CO2e/day",
+                    "percentage": 13.3
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 5913.0,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 11.83,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 10.8,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 3942.0,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 7884.0,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 23652.0,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 2619.91,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": "50",
+                "pue": "1.8",
+                "renewable_percentage": "0",
+                "region": "india",
+                "num_servers": "4",
+                "cpu_utilization": "50",
+                "gpu_count": "1",
+                "storage_capacity": "100",
+                "facility_area": "2000",
+                "cooling_efficiency": "4",
+                "utilization_hours": "24"
+            },
+            "timestamp": "2025-05-08T16:27:51.014210"
+        }
+    },
+    {
+        "timestamp": "2025-05-08T17:09:51.710216",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 59.11,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 21574.78,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 96.9,
+                    "unit": "kWh/day"
+                }
+            },
+            "details": {
+                "electricity_consumption": {
+                    "value": 51.0,
+                    "unit": "kWh/day"
+                },
+                "pue": {
+                    "value": 1.9,
+                    "unit": ""
+                },
+                "renewable_percentage": {
+                    "value": 0.0,
+                    "unit": "%"
+                },
+                "carbon_intensity": {
+                    "value": 0.61,
+                    "unit": "kg CO2e/kWh"
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 31.11,
+                    "unit": "kg CO2e/day",
+                    "percentage": 52.6
+                },
+                "cooling": {
+                    "value": 19.6,
+                    "unit": "kg CO2e/day",
+                    "percentage": 33.2
+                },
+                "other_overhead": {
+                    "value": 8.4,
+                    "unit": "kg CO2e/day",
+                    "percentage": 14.2
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 4314.96,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 5.39,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 11.63,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 4244.22,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 7948.61,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 21574.78,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 0,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": "51",
+                "pue": "1.9",
+                "renewable_percentage": "0",
+                "region": "china",
+                "num_servers": "5",
+                "cpu_utilization": "70",
+                "gpu_count": "2",
+                "storage_capacity": "5",
+                "facility_area": "4000",
+                "cooling_efficiency": "5",
+                "utilization_hours": "24"
+            },
+            "timestamp": "2025-05-08T17:09:51.709594"
+        }
+    },
+    {
+        "timestamp": "2025-05-08T17:14:58.551962",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 59.11,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 21574.78,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 96.9,
+                    "unit": "kWh/day"
+                }
+            },
+            "details": {
+                "electricity_consumption": {
+                    "value": 51.0,
+                    "unit": "kWh/day"
+                },
+                "pue": {
+                    "value": 1.9,
+                    "unit": ""
+                },
+                "renewable_percentage": {
+                    "value": 0.0,
+                    "unit": "%"
+                },
+                "carbon_intensity": {
+                    "value": 0.61,
+                    "unit": "kg CO2e/kWh"
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 31.11,
+                    "unit": "kg CO2e/day",
+                    "percentage": 52.6
+                },
+                "cooling": {
+                    "value": 19.6,
+                    "unit": "kg CO2e/day",
+                    "percentage": 33.2
+                },
+                "other_overhead": {
+                    "value": 8.4,
+                    "unit": "kg CO2e/day",
+                    "percentage": 14.2
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 4314.96,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 5.39,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 11.63,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 4244.22,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 7948.61,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 21574.78,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 0,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": "51",
+                "pue": "1.9",
+                "renewable_percentage": "0",
+                "region": "china",
+                "num_servers": "5",
+                "cpu_utilization": "70",
+                "gpu_count": "2",
+                "storage_capacity": "5",
+                "facility_area": "4000",
+                "cooling_efficiency": "5",
+                "utilization_hours": "24"
+            },
+            "timestamp": "2025-05-08T17:14:58.550214"
+        }
+    },
+    {
+        "timestamp": "2025-05-08T17:15:07.206761",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 0.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "details": {
+                "electricity_consumption": {
+                    "value": 0.0,
+                    "unit": "kWh/day"
+                },
+                "pue": {
+                    "value": 1.5,
+                    "unit": ""
+                },
+                "renewable_percentage": {
+                    "value": 0.0,
+                    "unit": "%"
+                },
+                "carbon_intensity": {
+                    "value": 0.475,
+                    "unit": "kg CO2e/kWh"
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                },
+                "cooling": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                },
+                "other_overhead": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 0,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 0,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 0.0,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 0.0,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 0,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": "0",
+                "pue": "1.5",
+                "renewable_percentage": "0",
+                "region": "global_average",
+                "num_servers": "0",
+                "cpu_utilization": "0",
+                "gpu_count": "0",
+                "storage_capacity": "0",
+                "facility_area": "0",
+                "cooling_efficiency": "3",
+                "utilization_hours": "24"
+            },
+            "timestamp": "2025-05-08T17:15:07.205648"
+        }
+    },
+    {
+        "timestamp": "2025-05-08T17:34:49.810805",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 0.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "details": {
+                "electricity_consumption": {
+                    "value": 0.0,
+                    "unit": "kWh/day"
+                },
+                "pue": {
+                    "value": 1.5,
+                    "unit": ""
+                },
+                "renewable_percentage": {
+                    "value": 0.0,
+                    "unit": "%"
+                },
+                "carbon_intensity": {
+                    "value": 0.475,
+                    "unit": "kg CO2e/kWh"
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                },
+                "cooling": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                },
+                "other_overhead": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 0,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 0,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 0.0,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 0.0,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 0,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": "0",
+                "pue": "1.5",
+                "renewable_percentage": "0",
+                "region": "global_average",
+                "num_servers": "0",
+                "cpu_utilization": "0",
+                "gpu_count": "0",
+                "storage_capacity": "0",
+                "facility_area": "0",
+                "cooling_efficiency": "3",
+                "utilization_hours": "24"
+            },
+            "timestamp": "2025-05-08T17:34:49.809865"
+        }
+    },
+    {
+        "timestamp": "2025-05-08T17:41:13.089702",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 136.8,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 49932.0,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 190.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "details": {
+                "electricity_consumption": {
+                    "value": 100.0,
+                    "unit": "kWh/day"
+                },
+                "pue": {
+                    "value": 1.9,
+                    "unit": ""
+                },
+                "renewable_percentage": {
+                    "value": 0.0,
+                    "unit": "%"
+                },
+                "carbon_intensity": {
+                    "value": 0.72,
+                    "unit": "kg CO2e/kWh"
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 72.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 52.6
+                },
+                "cooling": {
+                    "value": 45.36,
+                    "unit": "kg CO2e/day",
+                    "percentage": 33.2
+                },
+                "other_overhead": {
+                    "value": 19.44,
+                    "unit": "kg CO2e/day",
+                    "percentage": 14.2
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 4993.2,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 16.64,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 22.8,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 8322.0,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 18396.0,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 49932.0,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 11522.77,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": "100",
+                "pue": "1.9",
+                "renewable_percentage": "0",
+                "region": "india",
+                "num_servers": "10",
+                "cpu_utilization": "40",
+                "gpu_count": "6",
+                "storage_capacity": "4",
+                "facility_area": "3000",
+                "cooling_efficiency": "7",
+                "utilization_hours": "24"
+            },
+            "timestamp": "2025-05-08T17:41:13.087779"
+        }
+    },
+    {
+        "timestamp": "2025-05-08T17:58:13.482429",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 216.0,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 78840.0,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 300.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "details": {
+                "electricity_consumption": {
+                    "value": 200.0,
+                    "unit": "kWh/day"
+                },
+                "pue": {
+                    "value": 1.5,
+                    "unit": ""
+                },
+                "renewable_percentage": {
+                    "value": 0.0,
+                    "unit": "%"
+                },
+                "carbon_intensity": {
+                    "value": 0.72,
+                    "unit": "kg CO2e/kWh"
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 144.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 66.7
+                },
+                "cooling": {
+                    "value": 50.4,
+                    "unit": "kg CO2e/day",
+                    "percentage": 23.3
+                },
+                "other_overhead": {
+                    "value": 21.6,
+                    "unit": "kg CO2e/day",
+                    "percentage": 10.0
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 15768.0,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 788.4,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 36.0,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 13140.0,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 15768.0,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 78840.0,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 0,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": "200",
+                "pue": "1.5",
+                "renewable_percentage": "0",
+                "region": "india",
+                "num_servers": "5",
+                "cpu_utilization": "80",
+                "gpu_count": "1",
+                "storage_capacity": "1",
+                "facility_area": "100",
+                "cooling_efficiency": "3",
+                "utilization_hours": "24"
+            },
+            "timestamp": "2025-05-08T17:58:13.480665"
+        }
+    },
+    {
+        "timestamp": "2025-05-08T17:58:29.238035",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 216.0,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 78840.0,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 300.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "details": {
+                "electricity_consumption": {
+                    "value": 200.0,
+                    "unit": "kWh/day"
+                },
+                "pue": {
+                    "value": 1.5,
+                    "unit": ""
+                },
+                "renewable_percentage": {
+                    "value": 0.0,
+                    "unit": "%"
+                },
+                "carbon_intensity": {
+                    "value": 0.72,
+                    "unit": "kg CO2e/kWh"
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 144.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 66.7
+                },
+                "cooling": {
+                    "value": 50.4,
+                    "unit": "kg CO2e/day",
+                    "percentage": 23.3
+                },
+                "other_overhead": {
+                    "value": 21.6,
+                    "unit": "kg CO2e/day",
+                    "percentage": 10.0
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 15768.0,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 788.4,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 36.0,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 13140.0,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 15768.0,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 78840.0,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 0,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": "200",
+                "pue": "1.5",
+                "renewable_percentage": "0",
+                "region": "india",
+                "num_servers": "5",
+                "cpu_utilization": "80",
+                "gpu_count": "1",
+                "storage_capacity": "1",
+                "facility_area": "100",
+                "cooling_efficiency": "3",
+                "utilization_hours": "24"
+            },
+            "timestamp": "2025-05-08T17:58:29.236876"
+        }
+    },
+    {
+        "timestamp": "2025-05-08T18:11:25.405009",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 216.0,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 78840.0,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 300.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "details": {
+                "electricity_consumption": {
+                    "value": 200.0,
+                    "unit": "kWh/day"
+                },
+                "pue": {
+                    "value": 1.5,
+                    "unit": ""
+                },
+                "renewable_percentage": {
+                    "value": 0.0,
+                    "unit": "%"
+                },
+                "carbon_intensity": {
+                    "value": 0.72,
+                    "unit": "kg CO2e/kWh"
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 144.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 66.7
+                },
+                "cooling": {
+                    "value": 50.4,
+                    "unit": "kg CO2e/day",
+                    "percentage": 23.3
+                },
+                "other_overhead": {
+                    "value": 21.6,
+                    "unit": "kg CO2e/day",
+                    "percentage": 10.0
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 15768.0,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 788.4,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 36.0,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 13140.0,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 15768.0,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 78840.0,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 0,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": "200",
+                "pue": "1.5",
+                "renewable_percentage": "0",
+                "region": "india",
+                "num_servers": "5",
+                "cpu_utilization": "80",
+                "gpu_count": "1",
+                "storage_capacity": "1",
+                "facility_area": "100",
+                "cooling_efficiency": "3",
+                "utilization_hours": "24"
+            },
+            "timestamp": "2025-05-08T18:11:25.403286"
+        }
+    },
+    {
+        "timestamp": "2025-05-08T19:51:46.046314",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 2160.0,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 788400.0,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 3000.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "details": {
+                "electricity_consumption": {
+                    "value": 2000.0,
+                    "unit": "kWh/day"
+                },
+                "pue": {
+                    "value": 1.5,
+                    "unit": ""
+                },
+                "renewable_percentage": {
+                    "value": 0.0,
+                    "unit": "%"
+                },
+                "carbon_intensity": {
+                    "value": 0.72,
+                    "unit": "kg CO2e/kWh"
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 1440.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 66.7
+                },
+                "cooling": {
+                    "value": 504.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 23.3
+                },
+                "other_overhead": {
+                    "value": 216.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 10.0
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 157680.0,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 3942.0,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 360.0,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 131400.0,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 157680.0,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 788400.0,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 0,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": "2000",
+                "pue": "1.5",
+                "renewable_percentage": "0",
+                "region": "india",
+                "num_servers": "5",
+                "cpu_utilization": "80",
+                "gpu_count": "2",
+                "storage_capacity": "1",
+                "facility_area": "200",
+                "cooling_efficiency": "3",
+                "utilization_hours": "24"
+            },
+            "timestamp": "2025-05-08T19:51:46.044261"
+        }
+    },
+    {
+        "timestamp": "2025-05-13T19:24:50.061683",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 0.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "scope_breakdown": {
+                "scope2": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year",
+                    "percentage": 0
+                },
+                "scope3": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year",
+                    "percentage": 0
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                },
+                "cooling": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                },
+                "other_overhead": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 0,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 0,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 0.0,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 0.0,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 0,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": 0.0,
+                "pue": 1.5,
+                "renewable_percentage": 0.0,
+                "region": "global_average",
+                "num_servers": 0,
+                "cpu_utilization": 0.0,
+                "gpu_count": 0,
+                "gpu_utilization": 0.0,
+                "storage_capacity": 0.0,
+                "storage_type": "HDD",
+                "facility_area": 0.0,
+                "cooling_efficiency": 3.0,
+                "utilization_hours": 24.0,
+                "ai_compute_hours": 0.0
+            },
+            "timestamp": "2025-05-13T19:24:50.060603"
+        }
+    },
+    {
+        "timestamp": "2025-05-13T19:25:47.962036",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 24.203424657534246,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 8834.25,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 190.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "scope_breakdown": {
+                "scope2": {
+                    "value": 3814.2499999999995,
+                    "unit": "kg CO2e/year",
+                    "percentage": 43.17570818122647
+                },
+                "scope3": {
+                    "value": 5020.0,
+                    "unit": "kg CO2e/year",
+                    "percentage": 56.82429181877352
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 5.5,
+                    "unit": "kg CO2e/day",
+                    "percentage": 22.724056937487617
+                },
+                "cooling": {
+                    "value": 1.2375,
+                    "unit": "kg CO2e/day",
+                    "percentage": 5.112912810934715
+                },
+                "other_overhead": {
+                    "value": 3.7125,
+                    "unit": "kg CO2e/day",
+                    "percentage": 15.338738432804144
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 1766.85,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 17.6685,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 22.8,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 8322.0,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 1405.2499999999995,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 3051.3999999999996,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 102.98475,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": 100.0,
+                "pue": 1.9,
+                "renewable_percentage": 0.0,
+                "region": "france",
+                "num_servers": 5,
+                "cpu_utilization": 90.0,
+                "gpu_count": 4,
+                "gpu_utilization": 70.0,
+                "storage_capacity": 4.0,
+                "storage_type": "HDD",
+                "facility_area": 500.0,
+                "cooling_efficiency": 3.0,
+                "utilization_hours": 22.0,
+                "ai_compute_hours": 10.0
+            },
+            "timestamp": "2025-05-13T19:25:47.961067"
+        }
+    },
+    {
+        "timestamp": "2025-05-13T19:33:21.156485",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 0.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "scope_breakdown": {
+                "scope2": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year",
+                    "percentage": 0
+                },
+                "scope3": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year",
+                    "percentage": 0
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                },
+                "cooling": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                },
+                "other_overhead": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 0,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 0,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 0.0,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 0.0,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 0,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": 0.0,
+                "pue": 1.5,
+                "renewable_percentage": 0.0,
+                "region": "global_average",
+                "num_servers": 0,
+                "cpu_utilization": 0.0,
+                "gpu_count": 0,
+                "gpu_utilization": 0.0,
+                "storage_capacity": 0.0,
+                "storage_type": "HDD",
+                "facility_area": 0.0,
+                "cooling_efficiency": 3.0,
+                "utilization_hours": 24.0,
+                "ai_compute_hours": 0.0
+            },
+            "timestamp": "2025-05-13T19:33:21.155490"
+        }
+    },
+    {
+        "timestamp": "2025-05-13T19:37:58.508018",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 0.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "scope_breakdown": {
+                "scope2": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year",
+                    "percentage": 0
+                },
+                "scope3": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year",
+                    "percentage": 0
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                },
+                "cooling": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                },
+                "other_overhead": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 0,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 0,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 0.0,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 0.0,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 0,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": 0.0,
+                "pue": 1.5,
+                "renewable_percentage": 0.0,
+                "region": "global_average",
+                "num_servers": 0,
+                "cpu_utilization": 0.0,
+                "gpu_count": 0,
+                "gpu_utilization": 0.0,
+                "storage_capacity": 0.0,
+                "storage_type": "HDD",
+                "facility_area": 0.0,
+                "cooling_efficiency": 3.0,
+                "utilization_hours": 24.0,
+                "ai_compute_hours": 0.0
+            },
+            "timestamp": "2025-05-13T19:37:58.506920"
+        }
+    },
+    {
+        "timestamp": "2025-05-13T19:38:35.389056",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 93.31945205479454,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 34061.600000000006,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 180.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "scope_breakdown": {
+                "scope2": {
+                    "value": 32061.600000000002,
+                    "unit": "kg CO2e/year",
+                    "percentage": 94.12828522441693
+                },
+                "scope3": {
+                    "value": 2000.0,
+                    "unit": "kg CO2e/year",
+                    "percentage": 5.871714775583061
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 48.8,
+                    "unit": "kg CO2e/day",
+                    "percentage": 52.29349179134273
+                },
+                "cooling": {
+                    "value": 9.76,
+                    "unit": "kg CO2e/day",
+                    "percentage": 10.458698358268546
+                },
+                "other_overhead": {
+                    "value": 29.28,
+                    "unit": "kg CO2e/day",
+                    "percentage": 31.376095074805644
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 17030.800000000003,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 113.53866666666669,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 21.599999999999998,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 7883.999999999999,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 10687.2,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 25649.280000000002,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 0,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": 100.0,
+                "pue": 1.8,
+                "renewable_percentage": 0.0,
+                "region": "japan",
+                "num_servers": 2,
+                "cpu_utilization": 80.0,
+                "gpu_count": 0,
+                "gpu_utilization": 0.0,
+                "storage_capacity": 0.0,
+                "storage_type": "HDD",
+                "facility_area": 300.0,
+                "cooling_efficiency": 3.0,
+                "utilization_hours": 24.0,
+                "ai_compute_hours": 12.0
+            },
+            "timestamp": "2025-05-13T19:38:35.388379"
+        }
+    },
+    {
+        "timestamp": "2025-05-13T19:42:36.909550",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 93.31945205479454,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 34061.600000000006,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 180.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "scope_breakdown": {
+                "scope2": {
+                    "value": 32061.600000000002,
+                    "unit": "kg CO2e/year",
+                    "percentage": 94.12828522441693
+                },
+                "scope3": {
+                    "value": 2000.0,
+                    "unit": "kg CO2e/year",
+                    "percentage": 5.871714775583061
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 48.8,
+                    "unit": "kg CO2e/day",
+                    "percentage": 52.29349179134273
+                },
+                "cooling": {
+                    "value": 9.76,
+                    "unit": "kg CO2e/day",
+                    "percentage": 10.458698358268546
+                },
+                "other_overhead": {
+                    "value": 29.28,
+                    "unit": "kg CO2e/day",
+                    "percentage": 31.376095074805644
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 17030.800000000003,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 113.53866666666669,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 21.599999999999998,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 7883.999999999999,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 10687.2,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 25649.280000000002,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 0,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": 100.0,
+                "pue": 1.8,
+                "renewable_percentage": 0.0,
+                "region": "japan",
+                "num_servers": 2,
+                "cpu_utilization": 80.0,
+                "gpu_count": 0,
+                "gpu_utilization": 0.0,
+                "storage_capacity": 0.0,
+                "storage_type": "HDD",
+                "facility_area": 300.0,
+                "cooling_efficiency": 3.0,
+                "utilization_hours": 24.0,
+                "ai_compute_hours": 12.0
+            },
+            "timestamp": "2025-05-13T19:42:36.908405"
+        }
+    },
+    {
+        "timestamp": "2025-05-13T19:54:01.677200",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 93.31945205479454,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 34061.600000000006,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 180.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "scope_breakdown": {
+                "scope2": {
+                    "value": 32061.600000000002,
+                    "unit": "kg CO2e/year",
+                    "percentage": 94.12828522441693
+                },
+                "scope3": {
+                    "value": 2000.0,
+                    "unit": "kg CO2e/year",
+                    "percentage": 5.871714775583061
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 48.8,
+                    "unit": "kg CO2e/day",
+                    "percentage": 52.29349179134273
+                },
+                "cooling": {
+                    "value": 9.76,
+                    "unit": "kg CO2e/day",
+                    "percentage": 10.458698358268546
+                },
+                "other_overhead": {
+                    "value": 29.28,
+                    "unit": "kg CO2e/day",
+                    "percentage": 31.376095074805644
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 17030.800000000003,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 113.53866666666669,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 21.599999999999998,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 7883.999999999999,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 10687.2,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 25649.280000000002,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 0,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": 100.0,
+                "pue": 1.8,
+                "renewable_percentage": 0.0,
+                "region": "japan",
+                "num_servers": 2,
+                "cpu_utilization": 80.0,
+                "gpu_count": 0,
+                "gpu_utilization": 0.0,
+                "storage_capacity": 0.0,
+                "storage_type": "HDD",
+                "facility_area": 300.0,
+                "cooling_efficiency": 3.0,
+                "utilization_hours": 24.0,
+                "ai_compute_hours": 12.0
+            },
+            "timestamp": "2025-05-13T19:54:01.674737"
+        }
+    },
+    {
+        "timestamp": "2025-05-13T19:54:36.656906",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 12.609931506849316,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 4602.625,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 15.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "scope_breakdown": {
+                "scope2": {
+                    "value": 2600.625,
+                    "unit": "kg CO2e/year",
+                    "percentage": 56.50308248010646
+                },
+                "scope3": {
+                    "value": 2002.0,
+                    "unit": "kg CO2e/year",
+                    "percentage": 43.49691751989354
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 4.75,
+                    "unit": "kg CO2e/day",
+                    "percentage": 37.668721653404305
+                },
+                "cooling": {
+                    "value": 0.59375,
+                    "unit": "kg CO2e/day",
+                    "percentage": 4.708590206675538
+                },
+                "other_overhead": {
+                    "value": 1.78125,
+                    "unit": "kg CO2e/day",
+                    "percentage": 14.125770620026614
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 2301.3125,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 23.013125,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 1.7999999999999998,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 656.9999999999999,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 520.1250000000005,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 2080.5,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 5377.292307692308,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": 10.0,
+                "pue": 1.5,
+                "renewable_percentage": 0.0,
+                "region": "global_average",
+                "num_servers": 2,
+                "cpu_utilization": 9.0,
+                "gpu_count": 0,
+                "gpu_utilization": 0.0,
+                "storage_capacity": 1.0,
+                "storage_type": "HDD",
+                "facility_area": 200.0,
+                "cooling_efficiency": 3.0,
+                "utilization_hours": 24.0,
+                "ai_compute_hours": 0.0
+            },
+            "timestamp": "2025-05-13T19:54:36.652939"
+        }
+    },
+    {
+        "timestamp": "2025-05-13T20:03:02.397395",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 12.609931506849316,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 4602.625,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 15.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "scope_breakdown": {
+                "scope2": {
+                    "value": 2600.625,
+                    "unit": "kg CO2e/year",
+                    "percentage": 56.50308248010646
+                },
+                "scope3": {
+                    "value": 2002.0,
+                    "unit": "kg CO2e/year",
+                    "percentage": 43.49691751989354
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 4.75,
+                    "unit": "kg CO2e/day",
+                    "percentage": 37.668721653404305
+                },
+                "cooling": {
+                    "value": 0.59375,
+                    "unit": "kg CO2e/day",
+                    "percentage": 4.708590206675538
+                },
+                "other_overhead": {
+                    "value": 1.78125,
+                    "unit": "kg CO2e/day",
+                    "percentage": 14.125770620026614
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 2301.3125,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 46.02625,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 1.7999999999999998,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 656.9999999999999,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 520.1250000000005,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 2080.5,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 0,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": 10.0,
+                "pue": 1.5,
+                "renewable_percentage": 0.0,
+                "region": "global_average",
+                "num_servers": 2,
+                "cpu_utilization": 90.0,
+                "gpu_count": 0,
+                "gpu_utilization": 0.0,
+                "storage_capacity": 1.0,
+                "storage_type": "HDD",
+                "facility_area": 100.0,
+                "cooling_efficiency": 3.0,
+                "utilization_hours": 24.0,
+                "ai_compute_hours": 0.0
+            },
+            "timestamp": "2025-05-13T20:03:02.394936"
+        }
+    },
+    {
+        "timestamp": "2025-05-14T11:51:06.094196",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 0.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "scope_breakdown": {
+                "scope2": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year",
+                    "percentage": 0
+                },
+                "scope3": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year",
+                    "percentage": 0
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                },
+                "cooling": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                },
+                "other_overhead": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 0,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 0,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 0.0,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 0.0,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 0,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": 0.0,
+                "pue": 1.5,
+                "renewable_percentage": 0.0,
+                "region": "global_average",
+                "num_servers": 0,
+                "cpu_utilization": 0.0,
+                "gpu_count": 0,
+                "gpu_utilization": 0.0,
+                "storage_capacity": 0.0,
+                "storage_type": "HDD",
+                "facility_area": 0.0,
+                "cooling_efficiency": 3.0,
+                "utilization_hours": 24.0,
+                "ai_compute_hours": 0.0
+            },
+            "timestamp": "2025-05-14T11:51:06.092727"
+        }
+    },
+    {
+        "timestamp": "2025-05-14T11:51:11.991351",
+        "results": {
+            "summary": {
+                "daily_carbon_emissions": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day"
+                },
+                "annual_carbon_emissions": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "energy_consumption": {
+                    "value": 0.0,
+                    "unit": "kWh/day"
+                }
+            },
+            "scope_breakdown": {
+                "scope2": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year",
+                    "percentage": 0
+                },
+                "scope3": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year",
+                    "percentage": 0
+                }
+            },
+            "emissions_breakdown": {
+                "it_equipment": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                },
+                "cooling": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                },
+                "other_overhead": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/day",
+                    "percentage": 0
+                }
+            },
+            "efficiency_metrics": {
+                "carbon_per_server": {
+                    "value": 0,
+                    "unit": "kg CO2e/server/year"
+                },
+                "emissions_per_sqm": {
+                    "value": 0,
+                    "unit": "kg CO2e/sqm/year"
+                }
+            },
+            "costs": {
+                "energy_cost_daily": {
+                    "value": 0.0,
+                    "unit": "USD/day"
+                },
+                "energy_cost_annual": {
+                    "value": 0.0,
+                    "unit": "USD/year"
+                }
+            },
+            "potential_savings": {
+                "pue_improvement": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "renewable_improvement": {
+                    "value": 0.0,
+                    "unit": "kg CO2e/year"
+                },
+                "utilization_improvement": {
+                    "value": 0,
+                    "unit": "kg CO2e/year"
+                }
+            },
+            "input_data": {
+                "total_electricity": 0.0,
+                "pue": 1.5,
+                "renewable_percentage": 0.0,
+                "region": "global_average",
+                "num_servers": 0,
+                "cpu_utilization": 0.0,
+                "gpu_count": 0,
+                "gpu_utilization": 0.0,
+                "storage_capacity": 0.0,
+                "storage_type": "HDD",
+                "facility_area": 0.0,
+                "cooling_efficiency": 3.0,
+                "utilization_hours": 24.0,
+                "ai_compute_hours": 0.0
+            },
+            "timestamp": "2025-05-14T11:51:11.988041"
+        }
+    }
+]

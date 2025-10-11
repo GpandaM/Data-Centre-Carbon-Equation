@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Results</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Match index.html's btn-calculate styling */
+        .btn-download {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 14px 28px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 10px auto;
+            text-align: center;
+            text-decoration: none;
+        }
+        .btn-download:hover {
+            background-color: #388E3C;
+        }
+        /* Debug section styling */
+        .debug-section {
+            display: none;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .debug-section pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans p-6">
+    <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6 space-y-6">
+        <div class="flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-green-700">Carbon Footprint Results</h1>
+            <span class="text-sm text-gray-500">Last calculated: {{ timestamp }}</span>
+        </div>
+
+        <!-- Daily Emissions -->
+        <div class="bg-green-50 p-4 rounded-lg">
+            <h2 class="text-lg font-semibold text-gray-700">Daily Emissions</h2>
+            <p class="text-3xl font-bold text-green-600">
+                {{ results.summary.daily_carbon_emissions.value | round(2) }}
+                <span class="text-lg font-medium">{{ results.summary.daily_carbon_emissions.unit }}</span>
+            </p>
+            <p class="text-sm text-gray-500">based on current settings</p>
+        </div>
+
+        <!-- Annual Projection -->
+        <div class="bg-green-50 p-4 rounded-lg">
+            <h2 class="text-lg font-semibold text-gray-700">Annual Projection</h2>
+            <p class="text-3xl font-bold text-green-600">
+                {{ results.summary.annual_carbon_emissions.value | round(2) }}
+                <span class="text-lg font-medium">{{ results.summary.annual_carbon_emissions.unit }}</span>
+            </p>
+            <p class="text-sm text-gray-500">
+                equivalent to {{ results.summary.annual_carbon_emissions.value / 21.77 | round(1) }} trees needed for carbon offset
+            </p>
+        </div>
+
+        <!-- Emissions by Category -->
+        <div>
+            <h2 class="text-lg font-semibold text-gray-700 mb-2">Emissions by Category</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="text-gray-600">IT Equipment</p>
+                    <p class="text-xl font-bold">
+                        {{ results.emissions_breakdown.it_equipment.value | round(2) }} {{ results.emissions_breakdown.it_equipment.unit }}
+                    </p>
+                    <p class="text-sm text-gray-500">{{ results.emissions_breakdown.it_equipment.percentage | round(1) }}% of total</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="text-gray-600">Cooling</p>
+                    <p class="text-xl font-bold">
+                        {{ results.emissions_breakdown.cooling.value | round(2) }} {{ results.emissions_breakdown.cooling.unit }}
+                    </p>
+                    <p class="text-sm text-gray-500">{{ results.emissions_breakdown.cooling.percentage | round(1) }}% of total</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="text-gray-600">Other Overhead</p>
+                    <p class="text-xl font-bold">
+                        {{ results.emissions_breakdown.other_overhead.value | round(2) }} {{ results.emissions_breakdown.other_overhead.unit }}
+                    </p>
+                    <p class="text-sm text-gray-500">{{ results.emissions_breakdown.other_overhead.percentage | round(1) }}% of total</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Efficiency Metrics -->
+        <div>
+            <h2 class="text-lg font-semibold text-gray-700 mb-2">Efficiency Metrics</h2>
+            <div class="space-y-3">
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="text-gray-600">Per Server</p>
+                    <p class="text-xl font-bold">
+                        {{ results.efficiency_metrics.carbon_per_server.value | round(2) }}
+                        {{ results.efficiency_metrics.carbon_per_server.unit }}
+                    </p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="text-gray-600">Per Square Meter</p>
+                    <p class="text-xl font-bold">
+                        {{ results.efficiency_metrics.emissions_per_sqm.value | round(2) }}
+                        {{ results.efficiency_metrics.emissions_per_sqm.unit }}
+                    </p>
+                </div>
+                {% if results.efficiency_metrics.carbon_per_gpu %}
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="text-gray-600">Per GPU</p>
+                    <p class="text-xl font-bold">
+                        {{ results.efficiency_metrics.carbon_per_gpu.value | round(2) }}
+                        {{ results.efficiency_metrics.carbon_per_gpu.unit }}
+                    </p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Cost Estimates -->
+        <div>
+            <h2 class="text-lg font-semibold text-gray-700 mb-2">Energy Cost</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="text-gray-600">Daily</p>
+                    <p class="text-xl font-bold">
+                        {{ results.costs.energy_cost_daily.value | round(2) }}
+                        {{ results.costs.energy_cost_daily.unit }}
+                    </p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="text-gray-600">Annual</p>
+                    <p class="text-xl font-bold">
+                        {{ results.costs.energy_cost_annual.value | round(2) }}
+                        {{ results.costs.energy_cost_annual.unit }}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Potential Savings -->
+        <div>
+            <h2 class="text-lg font-semibold text-gray-700 mb-2">Potential Savings</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="text-gray-600">PUE Optimization</p>
+                    <p class="text-xl font-bold">
+                        {{ results.potential_savings.pue_improvement.value | round(2) }}
+                        {{ results.potential_savings.pue_improvement.unit }}
+                    </p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="text-gray-600">Renewables Optimization</p>
+                    <p class="text-xl font-bold">
+                        {{ results.potential_savings.renewable_improvement.value | round(2) }}
+                        {{ results.potential_savings.renewable_improvement.unit }}
+                    </p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="text-gray-600">Utilization Optimization</p>
+                    <p class="text-xl font-bold">
+                        {{ results.potential_savings.utilization_improvement.value | round(2) }}
+                        {{ results.potential_savings.utilization_improvement.unit }}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scope Breakdown -->
+        <div>
+            <h2 class="text-lg font-semibold text-gray-700 mb-2">Scope Breakdown</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="text-gray-600">Scope 2</p>
+                    <p class="text-xl font-bold">
+                        {{ results.scope_breakdown.scope2.value | round(2) }}
+                        {{ results.scope_breakdown.scope2.unit }}
+                    </p>
+                    <p class="text-sm text-gray-500">{{ results.scope_breakdown.scope2.percentage | round(1) }}% of total</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <p class="text-gray-600">Scope 3</p>
+                    <p class="text-xl font-bold">
+                        {{ results.scope_breakdown.scope3.value | round(2) }}
+                        {{ results.scope_breakdown.scope3.unit }}
+                    </p>
+                    <p class="text-sm text-gray-500">{{ results.scope_breakdown.scope3.percentage | round(1) }}% of total</p>
+                </div>
+            </div>
+        </div>
+
+        <!--Back to Calculator-->
+        <div>
+            <a href = "{{ url_for('index')}}" class="btn-back">Back to Calculator</a>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
